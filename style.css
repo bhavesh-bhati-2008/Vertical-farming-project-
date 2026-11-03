@@ -1,0 +1,680 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #315d43;
+    --dark: #1d3027;
+    --light: #f6f5ed;
+    --lime: #d5e5a4;
+    --grey: #68766c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--light);
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #435449;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.nav-btn, .primary-btn {
+    background: var(--green);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.nav-btn:hover, .primary-btn:hover {
+    background: #244832;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.tag {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 75px;
+    line-height: 1.05;
+    margin: 20px 0;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: var(--green);
+    font-style: italic;
+}
+
+.hero-content p {
+    color: var(--grey);
+    max-width: 480px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    border: 1px solid #b8c5b8;
+    padding: 11px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-image {
+    height: 480px;
+    position: relative;
+    border-radius: 48% 48% 5px 5px;
+    overflow: hidden;
+    background: #dce7cc;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.image-label h3 {
+    font-family: Georgia, serif;
+}
+
+.image-label p {
+    font-size: 12px;
+    color: var(--grey);
+}
+
+/* STATS */
+
+.stats {
+    background: var(--green);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 5%;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat h2 {
+    font-size: 35px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+.stat p {
+    font-size: 14px;
+    max-width: 130px;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 90px 5%;
+}
+
+.about {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    height: 430px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content h2,
+.benefits-content h2 {
+    font-family: Georgia, serif;
+    font-size: 45px;
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.about-content > p,
+.benefits-content > p {
+    color: var(--grey);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.feature span {
+    background: var(--lime);
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.feature h3 {
+    font-size: 16px;
+}
+
+.feature p {
+    font-size: 13px;
+    color: var(--grey);
+}
+
+/* METHODS */
+
+.methods {
+    background: #edf0e6;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: var(--grey);
+}
+
+.method-cards {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border: 1px solid #dfe4d8;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px #00000012;
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+.card span {
+    font-size: 12px;
+    color: var(--green);
+    font-weight: bold;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.card p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+/* BENEFITS */
+
+.benefits {
+    background: var(--green);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.benefits-content {
+    max-width: 550px;
+    justify-self: end;
+}
+
+.benefits-content .tag {
+    color: var(--lime);
+}
+
+.benefits-content p {
+    color: #d9e4d9;
+    margin-bottom: 25px;
+}
+
+.benefits-box {
+    background: white;
+    color: var(--dark);
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 450px;
+    width: 100%;
+}
+
+.benefits-box h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 13px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.benefit-item span {
+    font-size: 23px;
+}
+
+.benefit-item p {
+    font-weight: bold;
+}
+
+/* CALCULATOR */
+
+.calculator {
+    background: #edf0e6;
+}
+
+.calculator-box {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+.calculator-box label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 8px;
+}
+
+.calculator-box input,
+.calculator-box select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd4c7;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.result {
+    background: #edf2e5;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.result h2 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    color: var(--green);
+}
+
+.result p {
+    color: var(--grey);
+    font-size: 13px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 45px 20px 20px;
+}
+
+footer h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+footer > p {
+    color: #c1cec2;
+    margin: 10px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a:hover {
+    color: var(--lime);
+}
+
+.copyright {
+    border-top: 1px solid #ffffff25;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--light);
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 0;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about,
+    .benefits {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .about-content h2,
+    .benefits-content h2 {
+        font-size: 35px;
+    }
+
+    .method-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-content {
+        justify-self: start;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+}
+
+/* INSIDE A VERTICAL FARM SECTION */
+
+.inside-farm {
+    padding: 90px 5%;
+    background: #f6f5ed;
+}
+
+.farm-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.farm-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.farm-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-icon {
+    min-width: 50px;
+    height: 50px;
+    background: #d5e5a4;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+}
+
+.farm-step h3 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 5px;
+    color: #1d3027;
+}
+
+.farm-step p {
+    color: #68766c;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.farm-image {
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.farm-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.farm-image-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: white;
+    padding: 18px;
+    border-radius: 5px;
+}
+
+.farm-image-text h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+}
+
+.farm-image-text p {
+    color: #68766c;
+    font-size: 13px;
+}
+
+.farm-facts {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 30px;
+    background: #315d43;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.farm-facts h3 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    color: #d5e5a4;
+}
+
+.farm-facts p {
+    font-size: 13px;
+    color: #e0e9dc;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .farm-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .farm-image {
+        height: 320px;
+    }
+
+    .farm-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .farm-step {
+        gap: 14px;
+    }
+}
